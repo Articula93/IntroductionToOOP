@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IntrodustionToOOP", "Introd
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HomeWorkOOP", "HomeWorkOOP\HomeWorkOOP.vcxproj", "{BF098C6E-2B1A-4023-BFC1-38C0FB21EED1}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PracticOOP", "PracticOOP\PracticOOP.vcxproj", "{3DF2CC97-C63D-4B71-8A82-337C3B25C350}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{BF098C6E-2B1A-4023-BFC1-38C0FB21EED1}.Release|x64.Build.0 = Release|x64
 		{BF098C6E-2B1A-4023-BFC1-38C0FB21EED1}.Release|x86.ActiveCfg = Release|Win32
 		{BF098C6E-2B1A-4023-BFC1-38C0FB21EED1}.Release|x86.Build.0 = Release|Win32
+		{3DF2CC97-C63D-4B71-8A82-337C3B25C350}.Debug|x64.ActiveCfg = Debug|x64
+		{3DF2CC97-C63D-4B71-8A82-337C3B25C350}.Debug|x64.Build.0 = Debug|x64
+		{3DF2CC97-C63D-4B71-8A82-337C3B25C350}.Debug|x86.ActiveCfg = Debug|Win32
+		{3DF2CC97-C63D-4B71-8A82-337C3B25C350}.Debug|x86.Build.0 = Debug|Win32
+		{3DF2CC97-C63D-4B71-8A82-337C3B25C350}.Release|x64.ActiveCfg = Release|x64
+		{3DF2CC97-C63D-4B71-8A82-337C3B25C350}.Release|x64.Build.0 = Release|x64
+		{3DF2CC97-C63D-4B71-8A82-337C3B25C350}.Release|x86.ActiveCfg = Release|Win32
+		{3DF2CC97-C63D-4B71-8A82-337C3B25C350}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
