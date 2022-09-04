@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<conio.h>
 #include<stdio.h>
 using namespace std;
@@ -41,7 +41,7 @@ void Fraction :: set_denominator(int den)
 	if (den != 0)
 		denominator = den;
 	else
-		cout << "Çíàìåíàòåëü íå ìîæåò áûòü ðàâåí íóëþ: " << endl;
+		cout << "Ð—Ð½Ð°Ð¼ÐµÐ½Ð°Ñ‚ÐµÐ»ÑŒ Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ Ñ€Ð°Ð²ÐµÐ½ Ð½ÑƒÐ»ÑŽ: " << endl;
 }
 int Fraction :: get_numerator() const
 {
@@ -155,21 +155,21 @@ void Fraction :: NOD(Fraction& f)
 	{
 		i--;
 	}
-	cout << "Íàèáîëüøèé îáùèé äåëèòåëü äðîáè " << i << endl;
+	cout << "ÐÐ°Ð¸Ð±Ð¾Ð»ÑŒÑˆÐ¸Ð¹ Ð¾Ð±Ñ‰Ð¸Ð¹ Ð´ÐµÐ»Ð¸Ñ‚ÐµÐ»ÑŒ Ð´Ñ€Ð¾Ð±Ð¸ " << i << endl;
 	f.numerator /= i;
 	f.denominator /= i;
 }
 void Fraction :: Con(Fraction& f)
 {
 	double d = (double)f.numerator / f.denominator;
-	cout << "Ïðåîáðàçîâàíàÿ îáû÷íàÿ äðîáü â äåñÿòè÷íóþ = " << d << endl;
+	cout << "ÐŸÑ€ÐµÐ¾Ð±Ñ€Ð°Ð·Ð¾Ð²Ð°Ð½Ð°Ñ Ð¾Ð±Ñ‹Ñ‡Ð½Ð°Ñ Ð´Ñ€Ð¾Ð±ÑŒ Ð² Ð´ÐµÑÑÑ‚Ð¸Ñ‡Ð½ÑƒÑŽ = " << d << endl;
 }
 void Fraction ::modf(Fraction& f)
 {
 	int x;
 	x = f.numerator / f.denominator;
 	f.numerator = f.numerator - x * f.denominator;
-	cout << "öåëàÿ ÷àñòü = " << x << endl;
+	cout << "Ñ†ÐµÐ»Ð°Ñ Ñ‡Ð°ÑÑ‚ÑŒ = " << x << endl;
 }
 void Fraction :: Print() const
 {
