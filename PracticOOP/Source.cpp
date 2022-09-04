@@ -2,6 +2,8 @@
 #include<string>
 #include <windows.h>
 #include <cmath>
+#include<conio.h>
+#include<stdio.h>
 using namespace std;
 
 //#define CARS
@@ -21,8 +23,8 @@ using namespace std;
 //#define COUNTER
 //#define ENGLCON
 //#define FRACTION_2
-#define FRACTION_3
-//#define FRACTION_4
+//#define FRACTION_3
+//#define DATA
 #if defined CARS
 class Cars
 {
@@ -1144,67 +1146,195 @@ int main()
 	return 0;
 }
 #endif
-#if defined FRACTION_4
-class Fraction
-{
-	int numerator;
-	int denominator;
-public:
+#if defined DATA
 
-	void set_numerator(int numerator)
-	{
-		this->numerator = numerator;
-	}
-	void set_denominator(int den)
-	{
-		if (den != 0)
-			denominator = den;
-		else
-			cout << "Знаменатель не может быть равен нулю: " << endl;
-	}
-	int get_numerator()
-	{
-		return numerator;
-	}
-	int get_denominator()
-	{
-		return denominator;
-	}
-	Fraction(int num = 0, int den = 1)
-	{
-		numerator = num;
-		set_denominator(den);
-	}
-	Fraction(const Fraction& other)
-	{
-		//Fraction f1;
-		this->numerator = other.numerator;
-		this->denominator = other.denominator;
-	}
-		void NOD(Fraction& f)
-		{
-			int i;
-			i = f.numerator;
-			while (!(f.numerator % i == 0 && f.denominator % i == 0))
-			{
-				i--;
-			}
-			cout << "Наибольший общий делитель дроби " << i << endl;
-			f.numerator /= i;
-			f.denominator /= i;
-		}
-		void Print()
-		{
-			cout << numerator << "/" << denominator;
-		}
-	};
+//class Date
+//{
+//	int day;
+//	int month;
+//	int year;
+//public:
+//	void setDay(int value)
+//	{
+//		day = value;
+//	}
+//	int getDay() const
+//	{
+//		return day;
+//	}
+//};
+
+//class Date
+//{
+//	const int baseYear;
+//	int& currentYear;
+//	int day;
+//	int month;
+//	int year;
+//public:
+//	Date(int currYear): baseYear{2000}, currentYear(currYear)
+//		void setDay(int value)
+//			{
+//				day = value;
+//			}
+//			int getDay() const
+//			{
+//				return day;
+//			}
+//};
+//
+//int main()
+//{
+//	setlocale(LC_ALL, "Russian");
+//
+//
+//	Date aDate;
+//	aDate.setDay(10);
+//	cout << aDate.getDay() << endl;
+//	getchar();
+//	return 0;
+//}
+
+//class Account
+//{
+//	double sum;
+//	const double rate;
+//public:
+//	Account(double Rate, double Sum):rate{Rate}
+//	{
+//		
+//		this->sum = sum;
+//	}
+//	double getRate() const
+//	{
+//		return rate;
+//	}
+//	double getIncome() 
+//	{
+//		return sum * rate / 100;
+//	}
+//	double getIncome() const
+//	{
+//		return sum * rate / 100;
+//	}
+//	double setSum()
+//	{
+//		sum += getIncome();
+//		return sum;
+//	}
+//	double getSum() const
+//	{
+//	
+//		return sum;
+//	}
+//};
+//
+//int main()
+//{
+//	setlocale(LC_ALL, "Russian");
+//	Account account(5, 2000);
+//	const Account account1(8, 5000);
+//	account.getRate();
+//	account1.getRate();
+//	account.getSum();
+//	account1.getSum();
+//	account.getIncome();
+//	account1.getIncome();
+//	account.setSum();
+//	
+//	_getch();
+//}
+//using namespace std;
+//
+//class Date
+//{
+//	int day;
+//	int month;
+//	int year;
+//public:
+//	Date(int day, int month, int year) :day{ day }, month{ month }, year{ year }
+//	{}
+//	Date(int year): Date(1,1,year)
+//	{}
+//	friend void displayDate(Date date);
+//};
+//void displayDate(Date date)
+//{
+//	std::cout << date.day << ". " << date.month << " . " << date.year << " . " << std::endl;
+//}
+//Date baseDate()
+//{
+//	return 2000;
+//}
+//int main()
+//{
+//	setlocale(LC_ALL, "Russian");
+//	displayDate(2020);
+//	Date date = 2010;
+//	displayDate(date);
+//	Date date2000 = baseDate();
+//	displayDate(date2000);
+//	getchar();
+//	return 0;
+//}
+
+using namespace std;
+
+class Array
+{
+	int size;
+	int* array;
+public:
+	explicit Array(int size = 10);
+	~Array();
+	int getSize() const;
+	int getValue(int index) const;
+	void setValue(int index, int value);
+	void display(int index) const;
+};
+Array::Array(int size)
+{
+	Array::size = size;
+	array = new int[size];
+}
+Array:: ~Array()
+{
+	delete[] array;
+}
+int Array::getSize() const
+{
+	return size;
+}
+int Array::getValue(int index) const
+{
+	return array[index];
+}
+void Array::setValue(int index, int value)
+{
+	array[index] = value;
+}
+void Array::display(int index) const
+{
+	cout << array[index];
+}
+void display(const Array& array)
+{
+	for (int i = 0; i < array.getSize(); i++)
+		array.display(i);
+	cout << endl;
+}
 int main()
 {
 	setlocale(LC_ALL, "Russian");
-	Fraction f(3, 9);
-    f.NOD(f);
-	f.Print();
-	return 0;
+	int size = 4;
+	Array array(size);
+	for (int i = 0; i < size; i++)
+		array.setValue(i, size - 1);
+		display(array);
+		cout << "!!! " << endl;
+		display(3);
+		_getch();
+		return 0;
 }
 #endif
 
